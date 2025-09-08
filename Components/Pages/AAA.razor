@@ -1,0 +1,40 @@
+﻿@page "/AAA"
+<h3>AAA</h3>
+
+<ul>
+    @foreach (var m in mail)
+    {
+        <li>
+            <b>@m.address</b>
+            <br />
+            @m.note
+        </li>
+    }
+</ul>
+
+@code {
+    public class Mail
+    {
+        public string address { get; set; }
+        public string note { get; set; }
+    }
+
+    // 多個 mail
+    List<Mail> mail = new()
+    {
+        new Mail { address = "sjes8460105✅", note = "gmail/hotmail/github" },
+        new Mail { address = "dsjhs9031206✅", note = "gmail/hotmail/github" },
+        new Mail { address = "clhs9331143✅", note = "gmail/hotmail/github" },
+        new Mail { address = "cycu9627132✅", note = "gmail/manus" },
+        new Mail { address = "sss9627132✅", note = "gmail/manus" },
+        new Mail { address = "ice9627132✅", note = "gmail/manus" },
+        new Mail { address = "subser111t✅", note = "gmail/manus" },
+        new Mail { address = "fe20040615ng✅", note = "gmail/manus" },
+    };
+
+    protected override void OnInitialized()
+    {
+        mail.Add(new Mail { address = "abuhg17", note = "DigitalOcean(優惠至十月八日/部署3個靜態網頁免費)" });
+        mail.Add(new Mail { address = "goldshoot0720", note = "DigitalOcean(無優惠/部署3個靜態網頁免費)" });
+    }
+}

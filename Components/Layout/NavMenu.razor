@@ -1,0 +1,82 @@
+﻿<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<style>
+    /* 用 Grid 讓圖文天生對齊 */
+    .nav .nav-link {
+        display: grid !important;
+        grid-template-columns: 1.4rem 1fr; /* 左欄放 icon、右欄放文字 */
+        align-items: center; /* 垂直置中 */
+        column-gap: .5rem;
+        color: #ccc;
+        transition: color .2s ease;
+        padding: .75rem 1rem; /* 可依喜好調 */
+        border-radius: .5rem;
+    }
+
+        /* 調整 icon 的基線與尺寸（解掉「往下」問題） */
+        .nav .nav-link .bi {
+            font-size: 1.2rem;
+            line-height: 1; /* 避免被文字行高影響 */
+            vertical-align: middle !important; /* 蓋過套件的預設 */
+            /* 微調 1px 如仍覺得低，可開啟下一行： */
+            /* transform: translateY(-1px); */
+            transition: color .2s ease;
+        }
+
+        /* hover/active 效果（一起變色） */
+        .nav .nav-link:hover,
+        .nav .nav-link.active {
+            color: #0d6efd;
+            background: rgba(13,110,253,.12); /* 可選：讓 active/hover 更明顯 */
+        }
+
+    /* 只想讓 icon 變色、文字維持原色 → 用這組替代上面的 hover/active */
+    /*
+      .nav .nav-link:hover .bi,
+      .nav .nav-link.active .bi { color: #0d6efd; }
+      */
+</style>
+
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand nav-item" href="/">星空下微風輕拂黃光閃耀的世界八</a>
+    </div>
+    <div class="container-fluid">
+        <a class="navbar-brand nav-item" href="/">2025年至2038年紀錄八</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="nav flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link d-flex align-items-center gap-2" href="" Match="NavLinkMatch.All">
+                <i class="bi bi-house-door-fill"></i>
+                <span>首頁</span>
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link d-flex align-items-center gap-2" href="/whoistu">
+                <i class="bi bi-person-standing"></i>
+                <span>塗哥是誰</span>
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link d-flex align-items-center gap-2" href="/whoisfeng">
+                <i class="bi bi-person-fill"></i>
+                <span>誰是鋒兄</span>
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link d-flex align-items-center gap-2" href="/about">
+                <i class="bi bi-info-square"></i>
+                <span>關於</span>
+            </NavLink>
+        </div>
+    </nav>
+</div>

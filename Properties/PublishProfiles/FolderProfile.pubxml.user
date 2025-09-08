@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\chbon\source\repos\BlazorApp1\BlazorApp1\bin\Release\net9.0\publish\</_PublishTargetUrl>
+    <History>True|2025-09-08T17:10:36.5993322Z||;True|2025-09-08T19:36:34.7356106+08:00||;True|2025-09-08T16:02:54.5953489+08:00||;True|2025-09-08T15:33:58.6742384+08:00||;True|2025-09-08T01:54:23.1434592+08:00||;True|2025-09-07T20:18:30.8046048+08:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
